@@ -854,8 +854,8 @@
                                     class="w-10 h-10 rounded-full border-2 flex items-center justify-center font-semibold text-sm transition-all"
                                     :class="index === currentScreenshotStep
                                         ? 'bg-customButton text-white border-customButton'
-                                        : 'bg-white text-gray-700 border-gray-300 hover:border-customButton hover:bg-purple-50'"> 
-                                        {{ index + 1 }}
+                                        : 'bg-white text-gray-700 border-gray-300 hover:border-customButton hover:bg-purple-50'">
+                                    {{ index + 1 }}
                                 </button>
                             </div>
 
@@ -1214,7 +1214,8 @@
                                     <div v-else-if="selectedPhase === 'cutover'" class="w-full">
                                         <div class="flex flex-col gap-6 items-center justify-center">
                                             <div class="w-full flex justify-center">
-                                                <img src="/images/partnership/IMG_1166.jpg" alt="Partnership Image 1"
+                                                <img src="/images/partnership/requirements-planning.jpg"
+                                                    alt="Partnership Image 3"
                                                     class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
                                                     @error="handleImageError" />
                                             </div>
@@ -1224,8 +1225,7 @@
                                                     @error="handleImageError" />
                                             </div>
                                             <div class="w-full flex justify-center">
-                                                <img src="/images/partnership/requirements-planning.jpg"
-                                                    alt="Partnership Image 3"
+                                                <img src="/images/partnership/IMG_1166.jpg" alt="Partnership Image 1"
                                                     class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
                                                     @error="handleImageError" />
                                             </div>
@@ -1540,7 +1540,7 @@
                                             </template>
                                         </div>
                                         <p class="text-xl font-bold text-indigo-600">{{ useItem.animatedValue.toFixed(2)
-                                            }}</p>
+                                        }}</p>
                                         <p class="text-sm text-gray-500 text-center">{{ useItem.label }}</p>
                                     </div>
                                 </div>
