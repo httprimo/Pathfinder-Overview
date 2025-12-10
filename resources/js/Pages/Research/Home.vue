@@ -30,7 +30,7 @@
                             rel="noopener noreferrer"
                             class="group relative px-8 py-4 bg-white text-customButton rounded-xl font-semibold overflow-hidden transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20"
                         >
-                            <span class="relative z-10">Visit Main System</span>
+                            <span class="relative z-10">View Pathfinder</span>
                             <div class="absolute inset-0 bg-gradient-to-r from-blue-gray to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
                         <a 
@@ -49,6 +49,310 @@
                 <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
+            </div>
+        </section>
+
+        <!-- Problem/Solution Split Screen Section -->
+        <section id="problem-solution" class="relative py-20 md:py-32 bg-white scroll-mt-16 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <!-- Left Side: The Problem -->
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-red-50 via-orange-50 to-red-100 rounded-3xl p-8 md:p-12 border-2 border-red-200 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-red-200/30 rounded-full blur-2xl -mr-16 -mt-16"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-8">
+                                    <h2 class="text-4xl md:text-5xl font-extrabold text-red-600 mb-4">
+                                        The Problem
+                                    </h2>
+                                    <div class="inline-block mb-6">
+                                        <span class="text-red-700 text-3xl md:text-4xl font-bold bg-red-100 px-6 py-3 rounded-xl border-2 border-red-300">
+                                            Skills Mismatch
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Disconnect Visual -->
+                                <div class="flex items-center justify-center mb-8 py-8">
+                                    <div class="relative w-full max-w-md h-32 md:h-40">
+                                        <!-- Left side: Job Seeker -->
+                                        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center z-10">
+                                            <div class="bg-white rounded-full p-4 shadow-lg border-4 border-gray-300 mb-2 relative">
+                                                <Icon name="user" :size="48" class="text-gray-600" />
+                                                <div class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">
+                                                    !
+                                                </div>
+                                            </div>
+                                            <span class="text-sm font-bold text-gray-800 bg-white px-3 py-1 rounded-lg border-2 border-gray-300 shadow-sm text-center">Nature of Job<br/></span>
+                                        </div>
+                                        
+                                        <!-- Disconnect Line -->
+                                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center z-0">
+                                            <svg class="w-32 md:w-40 h-2 text-red-500" viewBox="0 0 160 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 4 L160 4" stroke="currentColor" stroke-width="4" stroke-dasharray="8 8" />
+                                                <circle cx="80" cy="4" r="6" fill="#EF4444" />
+                                            </svg>
+                                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-1 border-2 border-red-600 shadow-lg">
+                                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Right side: Job -->
+                                        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center z-10">
+                                            <div class="bg-white rounded-full p-4 shadow-lg border-4 border-gray-300 mb-2 relative">
+                                                <Icon name="briefcase" :size="48" class="text-gray-600" />
+                                                <div class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">
+                                                    !
+                                                </div>
+                                            </div>
+                                            <span class="text-sm font-bold text-gray-800 bg-white px-3 py-1 rounded-lg border-2 border-gray-300 shadow-sm">Specialization</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 64% Statistic -->
+                                <div class="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-red-300">
+                                    <div class="text-6xl md:text-7xl font-extrabold text-red-600 mb-2">
+                                        64%
+                                    </div>
+                                    <p class="text-lg md:text-xl text-gray-700 font-semibold">
+                                        of TVL graduates experience<br/>job mismatch
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side: The Solution -->
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-8 md:p-12 border-2 border-blue-200 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-0 left-0 w-32 h-32 bg-blue-200/30 rounded-full blur-2xl -ml-16 -mt-16"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-8">
+                                    <h2 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-4">
+                                        The Solution
+                                    </h2>
+                                </div>
+                                
+                                <!-- Pathfinder Connection Visual -->
+                                <div class="flex items-center justify-center mb-8 py-8 md:py-12">
+                                    <div class="relative w-full max-w-md h-40 md:h-48 lg:h-56">
+                                        <!-- Left side: Student/Job Seeker -->
+                                        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center z-10">
+                                            <div class="bg-white rounded-full p-4 shadow-lg border-4 border-blue-300 mb-2 animate-pulse relative">
+                                                <Icon name="user" :size="48" class="text-blue-600" />
+                                                <div class="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">
+                                                    S
+                                                </div>
+                                            </div>
+                                            <span class="text-sm font-bold text-gray-800 bg-white px-3 py-1 rounded-lg border-2 border-blue-300 shadow-sm text-center">College Students<br/>or<br>Job Seekers</span>
+                                        </div>
+                                        
+                                        <!-- Pathfinder Logo in Center -->
+                                        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                                            <div class="bg-white rounded-full p-4 md:p-6 shadow-2xl border-4 md:border-6 border-customButton relative">
+                                                <img 
+                                                    src="/images/logo/Pathfinder_Logo_Transparent.png" 
+                                                    alt="Pathfinder Logo" 
+                                                    class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+                                                />
+                                                <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-customButton text-white text-sm md:text-base font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border-2 border-white shadow-lg">
+                                                    Pathfinder
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Connection Lines -->
+                                        <svg class="w-full h-32 absolute left-0 top-1/2 transform -translate-y-1/2 z-0" viewBox="0 0 400 100" preserveAspectRatio="none">
+                                            <path 
+                                                d="M 60 50 L 180 50" 
+                                                stroke="#6682A3" 
+                                                stroke-width="4" 
+                                                fill="none"
+                                                stroke-linecap="round"
+                                                class="animate-pulse"
+                                            />
+                                            <path 
+                                                d="M 220 50 L 340 50" 
+                                                stroke="#6682A3" 
+                                                stroke-width="4" 
+                                                fill="none"
+                                                stroke-linecap="round"
+                                                class="animate-pulse"
+                                            />
+                                            <circle cx="60" cy="50" r="6" fill="#6682A3" />
+                                            <circle cx="340" cy="50" r="6" fill="#6682A3" />
+                                        </svg>
+                                        
+                                        <!-- Right side: Company -->
+                                        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center z-10">
+                                            <div class="bg-white rounded-full p-4 shadow-lg border-4 border-blue-300 mb-2 animate-pulse relative" style="animation-delay: 0.5s;">
+                                                <Icon name="company" :size="48" class="text-blue-600" />
+                                                <div class="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">
+                                                    C
+                                                </div>
+                                            </div>
+                                            <span class="text-sm font-bold text-gray-800 bg-white px-3 py-1 rounded-lg border-2 border-blue-300 shadow-sm text-center">Organizations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Solution Description -->
+                                <div class="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-blue-300">
+                                    <p class="text-lg md:text-xl text-gray-700 font-semibold mb-2">
+                                        Pathfinder bridges the gap
+                                    </p>
+                                    <p class="text-base text-gray-600">
+                                        Connecting college students and job seekers with career opportunities and trainings through tag-based matching
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Barrier Graphic Section -->
+        <section id="cost-barrier" class="relative py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Breaking Down Cost Barriers
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Access to quality career training shouldn't be limited by financial constraints
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                    <!-- Existing Platforms -->
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 md:p-10 border-2 border-gray-300 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-gray-300/30 rounded-full blur-2xl -mr-12 -mt-12"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-6">
+                                    <div class="inline-block bg-gray-300 rounded-full p-4 mb-4">
+                                        <Icon  
+                                            src="/images/competitors-logo/linkedin-logo.png" 
+                                            alt="Linkedin Logo" 
+                                            class="w-16 h-16 object-contain" />
+                                    </div>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                                        Existing Platforms
+                                    </h3>
+                                    <p class="text-gray-600">Premium training comes at a price</p>
+                                </div>
+                                
+                                <div class="bg-white/80 rounded-2xl p-6 border-2 border-gray-300 mb-4">
+                                    <div class="flex items-center justify-center mb-4">
+                                        <div class="text-5xl md:text-6xl font-extrabold text-gray-800">
+                                            $19.99
+                                        </div>
+                                        <span class="text-xl text-gray-600 ml-2">-</span>
+                                        <div class="text-5xl md:text-6xl font-extrabold text-gray-800 ml-2">
+                                            $39.99
+                                        </div>
+                                    </div>
+                                    <p class="text-center text-lg font-semibold text-gray-700">
+                                        per month
+                                    </p>
+                                </div>
+                                
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>LinkedIn Learning: $19.99-$39.99/month</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>High subscription costs</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Financial barriers for students</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pathfinder -->
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-green-100 via-emerald-50 to-teal-100 rounded-3xl p-8 md:p-10 border-2 border-green-300 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-0 left-0 w-24 h-24 bg-green-300/30 rounded-full blur-2xl -ml-12 -mt-12"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-6">
+                                    <div class="inline-block bg-white rounded-full p-4 mb-4 shadow-lg">
+                                        <img 
+                                            src="/images/logo/Pathfinder_Logo_Transparent.png" 
+                                            alt="Pathfinder Logo" 
+                                            class="w-16 h-16 object-contain"
+                                        />
+                                    </div>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-green-800 mb-2">
+                                        Pathfinder
+                                    </h3>
+                                    <p class="text-green-700 font-semibold">Zero-cost access for everyone</p>
+                                </div>
+                                
+                                <div class="bg-white/80 rounded-2xl p-6 border-2 border-green-300 mb-4">
+                                    <div class="text-center">
+                                        <div class="text-5xl md:text-6xl font-extrabold text-green-600 mb-2">
+                                            FREE
+                                        </div>
+                                        <p class="text-lg font-semibold text-gray-700">
+                                            Zero-cost / Free
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>No subscription fees</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Accessible to all students and job seekers</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-700">
+                                        <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Promotes equity in education</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comparison Summary -->
+                <div class="mt-12 max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 md:p-8 border-2 border-blue-200">
+                        <div class="text-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                Making Quality Training Accessible
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Pathfinder eliminates financial barriers by providing a comprehensive, zero-cost platform that connects students with career opportunities and training resources. Unlike premium platforms that charge monthly subscriptions, Pathfinder is committed to equity and accessibility, ensuring that every student has the opportunity to bridge the skills gap and achieve their career goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -549,6 +853,294 @@
                     </div>
                 </div>
 
+                <!-- Process Model -->
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Process Model</h3>
+                    <div class="bg-gray-100 rounded-lg p-8 border-2 border-gray-300">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden p-8 md:p-12">
+                            <!-- Process Model Diagram -->
+                            <div class="relative w-full overflow-x-auto py-8">
+                                <div class="min-w-[900px] mx-auto">
+                                    <!-- Process Flow Container -->
+                                    <div class="flex items-center justify-between relative">
+                                        <!-- Requirements Planning -->
+                                        <button
+                                            @click="selectedPhase = 'requirements'"
+                                            :class="[
+                                                'relative z-10 px-6 py-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                selectedPhase === 'requirements' 
+                                                    ? 'bg-customButton text-white shadow-xl scale-105' 
+                                                    : 'bg-customblue text-white hover:bg-customButton'
+                                            ]"
+                                            style="clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);"
+                                        >
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg leading-tight">Requirements</p>
+                                                <p class="font-bold text-lg leading-tight">Planning</p>
+                                            </div>
+                                        </button>
+
+                                        <!-- Arrow -->
+                                        <div class="flex-1 h-1 bg-customblue mx-2 relative">
+                                            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-customblue border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                                        </div>
+
+                                        <!-- User Design with Iterative Loop -->
+                                        <div class="relative w-64 h-64 flex items-center justify-center">
+                                            <!-- Circular Loop Background -->
+                                            <div class="absolute inset-0 rounded-full border-8 border-indigo-600"></div>
+                                            
+                                            <!-- Loop Arrow Indicators -->
+                                            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 256 256">
+                                                <!-- Top arrow (Prototype) -->
+                                                <path d="M 128 16 L 128 60" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="128,16 122,26 134,26" fill="#4f46e5" />
+                                                
+                                                <!-- Right arrow (Test) -->
+                                                <path d="M 240 128 L 196 128" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="240,128 230,122 230,134" fill="#4f46e5" />
+                                                
+                                                <!-- Bottom arrow (Refine) -->
+                                                <path d="M 128 240 L 128 196" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="128,240 134,230 122,230" fill="#4f46e5" />
+                                                
+                                                <!-- Left arrow -->
+                                                <path d="M 16 128 L 60 128" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="16,128 26,134 26,122" fill="#4f46e5" />
+                                            </svg>
+                                            
+                                            <!-- Loop Labels - Positioned around the circle -->
+                                            <button
+                                                @click.stop="selectedPhase = 'prototype'"
+                                                :class="[
+                                                    'absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-110 cursor-pointer pointer-events-auto',
+                                                    selectedPhase === 'prototype'
+                                                        ? 'bg-indigo-700 text-white shadow-lg z-20'
+                                                        : 'bg-indigo-600 text-white hover:bg-indigo-700 z-20'
+                                                ]"
+                                            >
+                                                Prototype
+                                            </button>
+                                            
+                                            <button
+                                                @click.stop="selectedPhase = 'test'"
+                                                :class="[
+                                                    'absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-110 cursor-pointer pointer-events-auto',
+                                                    selectedPhase === 'test'
+                                                        ? 'bg-indigo-700 text-white shadow-lg z-20'
+                                                        : 'bg-indigo-600 text-white hover:bg-indigo-700 z-20'
+                                                ]"
+                                            >
+                                                Test
+                                            </button>
+                                            
+                                            <button
+                                                @click.stop="selectedPhase = 'refine'"
+                                                :class="[
+                                                    'absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-110 cursor-pointer pointer-events-auto',
+                                                    selectedPhase === 'refine'
+                                                        ? 'bg-indigo-700 text-white shadow-lg z-20'
+                                                        : 'bg-indigo-600 text-white hover:bg-indigo-700 z-20'
+                                                ]"
+                                            >
+                                                Refine
+                                            </button>
+
+                                            <!-- Central User Design Box -->
+                                            <button
+                                                @click="selectedPhase = 'user-design'"
+                                                :class="[
+                                                    'relative z-10 w-32 h-32 flex items-center justify-center rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                    selectedPhase === 'user-design'
+                                                        ? 'bg-customButton text-white shadow-xl scale-105'
+                                                        : 'bg-customblue text-white hover:bg-customButton'
+                                                ]"
+                                            >
+                                                <div class="text-center">
+                                                    <p class="font-bold text-lg leading-tight">User</p>
+                                                    <p class="font-bold text-lg leading-tight">Design</p>
+                                                </div>
+                                            </button>
+                                        </div>
+
+                                        <!-- Arrow -->
+                                        <div class="flex-1 h-1 bg-customButton mx-2 relative">
+                                            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-customButton border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                                        </div>
+
+                                        <!-- Construction -->
+                                        <button
+                                            @click="selectedPhase = 'construction'"
+                                            :class="[
+                                                'relative z-10 px-6 py-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                selectedPhase === 'construction'
+                                                    ? 'bg-customdarkblue text-white shadow-xl scale-105'
+                                                    : 'bg-customButton text-white hover:bg-customdarkblue'
+                                            ]"
+                                            style="clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%, 0 50%);"
+                                        >
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg">Construction</p>
+                                            </div>
+                                        </button>
+
+                                        <!-- Arrow -->
+                                        <div class="flex-1 h-1 bg-customdarkblue mx-2 relative">
+                                            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-customdarkblue border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                                        </div>
+
+                                        <!-- Cutover -->
+                                        <button
+                                            @click="selectedPhase = 'cutover'"
+                                            :class="[
+                                                'relative z-10 px-6 py-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                selectedPhase === 'cutover'
+                                                    ? 'bg-dark-slate text-white shadow-xl scale-105'
+                                                    : 'bg-customdarkblue text-white hover:bg-dark-slate'
+                                            ]"
+                                            style="clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%, 0 50%);"
+                                        >
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg">Cutover</p>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase Details Panel -->
+                            <transition
+                                enter-active-class="transition-all duration-300 ease-out"
+                                enter-from-class="opacity-0 transform translate-y-4"
+                                enter-to-class="opacity-100 transform translate-y-0"
+                                leave-active-class="transition-all duration-200 ease-in"
+                                leave-from-class="opacity-100"
+                                leave-to-class="opacity-0"
+                            >
+                                <div v-if="selectedPhase" class="mt-8 p-6 bg-indigo-50 rounded-lg border-2 border-indigo-200">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="text-2xl font-bold text-gray-900">{{ phaseDetails[selectedPhase].title }}</h4>
+                                        <button
+                                            @click="selectedPhase = null"
+                                            class="text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
+                                        >
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- Show image for Requirements Planning -->
+                                    <div v-if="selectedPhase === 'requirements'" class="w-full">
+                                        <img 
+                                            src="/images/partnership/requirements-planning.jpg" 
+                                            alt="Requirements Planning"
+                                            class="w-full h-auto rounded-lg shadow-lg"
+                                            @error="handleImageError"
+                                        />
+                                    </div>
+                                    <!-- Show images for User Design -->
+                                    <div v-else-if="selectedPhase === 'user-design'" class="w-full">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                                            <div class="w-full flex items-center justify-center">
+                                                <img 
+                                                    src="/images/user-design/figma-logo.png" 
+                                                    alt="Figma Logo"
+                                                    class="w-full h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center">
+                                                <img 
+                                                    src="/images/user-design/lucid-logo.png" 
+                                                    alt="Lucidchart Logo"
+                                                    class="w-full h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Show images for Construction -->
+                                    <div v-else-if="selectedPhase === 'construction'" class="w-full">
+                                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/vue-logo.png" 
+                                                    alt="Vue.js Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/tailwind-logo.png" 
+                                                    alt="Tailwind CSS Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/laravel-logo.png" 
+                                                    alt="Laravel Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/postgresql-logo.png" 
+                                                    alt="PostgreSQL Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/supabase-logo.png" 
+                                                    alt="Supabase Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Show images for Cutover -->
+                                    <div v-else-if="selectedPhase === 'cutover'" class="w-full">
+                                        <div class="flex flex-col gap-6 items-center justify-center">
+                                            <div class="w-full flex justify-center">
+                                                <img 
+                                                    src="/images/partnership/IMG_1166.jpg" 
+                                                    alt="Partnership Image 1"
+                                                    class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex justify-center">
+                                                <img 
+                                                    src="/images/partnership/IMG_1441.jpg" 
+                                                    alt="Partnership Image 2"
+                                                    class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex justify-center">
+                                                <img 
+                                                    src="/images/partnership/requirements-planning.jpg" 
+                                                    alt="Partnership Image 3"
+                                                    class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Show text description for other phases -->
+                                    <p v-else class="text-gray-700 leading-relaxed">{{ phaseDetails[selectedPhase].description }}</p>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- System Architecture Diagram -->
                 <div class="mb-16">
                     <h3 class="text-3xl font-bold text-gray-900 mb-6">System Architecture Diagram</h3>
@@ -715,24 +1307,268 @@
                     </div>
                 </div>
 
-                <!-- Statistics or Metrics -->
+                <!-- Research Metrics with Charts -->
                 <div class="relative bg-gradient-to-br from-gray-50 via-indigo-50/30 to-purple-50/30 rounded-3xl p-8 md:p-12 border border-gray-200/50 shadow-xl overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-200/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
                     <div class="relative z-10">
-                        <h3 class="text-3xl font-bold text-gray-900 mb-12 text-center">Research Metrics</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                            <div 
-                                v-for="(metric, index) in metrics" 
-                                :key="index"
-                                class="group relative bg-white rounded-2xl p-6 text-center card-hover border border-gray-200/50 shadow-lg hover:shadow-2xl overflow-hidden"
-                            >
-                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/0 to-purple-50/0 group-hover:from-indigo-50/50 group-hover:to-purple-50/50 transition-all duration-500"></div>
-                                <div class="relative z-10">
-                                    <div class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3 transform group-hover:scale-110 transition-transform duration-300">
-                                        {{ metric.value }}
-                                    </div>
-                                    <div class="text-gray-600 text-xs md:text-sm leading-tight">{{ metric.label }}</div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Participants of the study</h3>
+                        
+                        <div class="grid grid-cols-1 gap-8 mb-8">
+                            <!-- Bar Chart: IT Experts Specialization -->
+                            <div class="bg-white rounded-lg p-6 shadow-md">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">IT Experts</h4>
+                                <div class="h-96 flex items-center justify-center">
+                                    <canvas ref="itExpertsBarChart" width="400" height="480"></canvas>
                                 </div>
+                            </div>
+
+                            <!-- Pie Chart: End User Evaluators Distribution -->
+                            <div class="bg-white rounded-lg p-6 shadow-md">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-4 text-center">End Users</h4>
+                                <div class="h-80 flex items-center justify-center">
+                                    <canvas ref="endUserPieChart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Results Section -->
+        <section id="research-results" class="py-16 bg-gray-50 scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <SectionTitle 
+                    title="Research Results"
+                    subtitle="Findings, insights, and outcomes of our research"
+                />
+
+                <!-- Evaluation Results with Cards -->
+                <div class="relative bg-gradient-to-br from-gray-50 via-indigo-50/30 to-purple-50/30 rounded-3xl p-8 md:p-12 border border-gray-200/50 shadow-xl overflow-hidden mt-8">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-200/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Evaluation Results</h3>
+                        
+                        <div class="grid grid-cols-1 gap-8 mb-8">
+                            <!-- USE Mean Ratings with Stars -->
+                            <div class="bg-white rounded-lg p-8 shadow-md border-2 border-gray-200">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">USE Evaluation</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div 
+                                v-for="(useItem, index) in useRatings" 
+                                :key="index"
+                                class="flex flex-col items-center justify-center space-y-2"
+                            >
+                                <p class="text-gray-700 font-semibold text-center leading-tight">{{ useItem.characteristic }}</p>
+                                <div class="flex justify-center items-center gap-1">
+                                    <template v-for="star in 5" :key="star">
+                                        <template v-if="star <= Math.floor(useItem.animatedFill)">
+                                            <!-- Full star -->
+                                            <svg 
+                                                class="w-10 h-10 text-yellow-400 transition-all duration-300"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                        <template v-else-if="star === Math.floor(useItem.animatedFill) + 1 && (useItem.animatedFill % 1) > 0">
+                                            <!-- Partial star with animated fill percentage -->
+                                            <div class="relative w-10 h-10">
+                                                <svg 
+                                                    class="w-10 h-10 text-gray-300 absolute"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg 
+                                                    class="w-10 h-10 text-yellow-400 absolute overflow-hidden transition-all duration-300"
+                                                    :style="`clip-path: inset(0 ${100 - ((useItem.animatedFill % 1) * 100)}% 0 0);`"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            <!-- Empty star -->
+                                            <svg 
+                                                class="w-10 h-10 text-gray-300"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                    </template>
+                                </div>
+                                <p class="text-xl font-bold text-indigo-600">{{ useItem.animatedValue.toFixed(2) }}</p>
+                                <p class="text-sm text-gray-500 text-center">{{ useItem.label }}</p>
+                            </div>
+                        </div>
+                        
+                        <!-- USE Overall Rating -->
+                        <div class="mt-6 pt-6 border-t-2 border-gray-300">
+                            <div class="flex flex-col items-center justify-center space-y-3">
+                                <h5 class="text-lg font-semibold text-gray-700">Overall USE Rating</h5>
+                                <div class="flex justify-center items-center gap-1">
+                                    <template v-for="star in 5" :key="star">
+                                        <template v-if="star <= Math.floor(useAverage)">
+                                            <svg 
+                                                class="w-8 h-8 text-yellow-400"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                        <template v-else-if="star === Math.floor(useAverage) + 1 && (useAverage % 1) > 0">
+                                            <div class="relative w-8 h-8">
+                                                <svg 
+                                                    class="w-8 h-8 text-gray-300 absolute"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg 
+                                                    class="w-8 h-8 text-yellow-400 absolute overflow-hidden"
+                                                    :style="`clip-path: inset(0 ${100 - ((useAverage % 1) * 100)}% 0 0);`"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            <svg 
+                                                class="w-8 h-8 text-gray-300"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                    </template>
+                                </div>
+                                <p class="text-2xl font-bold text-indigo-600">{{ useAverage.toFixed(2) }}</p>
+                            </div>
+                        </div>
+                            </div>
+
+                            <!-- ISO Mean Ratings with Stars -->
+                            <div class="bg-white rounded-lg p-8 shadow-md border-2 border-gray-200">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">ISO/IEC 25010 Evaluation</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div 
+                                v-for="(isoItem, index) in isoRatings" 
+                                :key="index"
+                                class="flex flex-col items-center justify-center"
+                            >
+                                <div class="h-12 flex items-center justify-center mb-3">
+                                    <p class="text-gray-700 font-semibold text-center text-sm leading-tight px-2">{{ isoItem.characteristic }}</p>
+                                </div>
+                                <div class="flex justify-center items-center gap-1 mb-2 h-10">
+                                    <template v-for="star in 5" :key="star">
+                                        <template v-if="star <= Math.floor(isoItem.animatedFill)">
+                                            <!-- Full star -->
+                                            <svg 
+                                                class="w-10 h-10 text-yellow-400 transition-all duration-300"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                        <template v-else-if="star === Math.floor(isoItem.animatedFill) + 1 && (isoItem.animatedFill % 1) > 0">
+                                            <!-- Partial star with animated fill percentage -->
+                                            <div class="relative w-10 h-10">
+                                                <svg 
+                                                    class="w-10 h-10 text-gray-300 absolute"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg 
+                                                    class="w-10 h-10 text-yellow-400 absolute overflow-hidden transition-all duration-300"
+                                                    :style="`clip-path: inset(0 ${100 - ((isoItem.animatedFill % 1) * 100)}% 0 0);`"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            <!-- Empty star -->
+                                            <svg 
+                                                class="w-10 h-10 text-gray-300"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                    </template>
+                                </div>
+                                <p class="text-xl font-bold text-indigo-600 mb-1">{{ isoItem.animatedValue.toFixed(2) }}</p>
+                                <p class="text-sm text-gray-500 text-center">{{ isoItem.label }}</p>
+                            </div>
+                        </div>
+                        
+                        <!-- ISO Overall Rating -->
+                        <div class="mt-6 pt-6 border-t-2 border-gray-300">
+                            <div class="flex flex-col items-center justify-center space-y-3">
+                                <h5 class="text-lg font-semibold text-gray-700">Overall ISO/IEC 25010 Rating</h5>
+                                <div class="flex justify-center items-center gap-1">
+                                    <template v-for="star in 5" :key="star">
+                                        <template v-if="star <= Math.floor(isoAverage)">
+                                            <svg 
+                                                class="w-8 h-8 text-yellow-400"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                        <template v-else-if="star === Math.floor(isoAverage) + 1 && (isoAverage % 1) > 0">
+                                            <div class="relative w-8 h-8">
+                                                <svg 
+                                                    class="w-8 h-8 text-gray-300 absolute"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                <svg 
+                                                    class="w-8 h-8 text-yellow-400 absolute overflow-hidden"
+                                                    :style="`clip-path: inset(0 ${100 - ((isoAverage % 1) * 100)}% 0 0);`"
+                                                    fill="currentColor" 
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            <svg 
+                                                class="w-8 h-8 text-gray-300"
+                                                fill="currentColor" 
+                                                viewBox="0 0 20 20"
+                                            >
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </template>
+                                    </template>
+                                </div>
+                                <p class="text-2xl font-bold text-indigo-600">{{ isoAverage.toFixed(2) }}</p>
+                            </div>
+                        </div>
                             </div>
                         </div>
                     </div>
@@ -889,10 +1725,13 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue';
+import { Chart, registerables } from 'chart.js';
 import MainLayout from '@/Layouts/MainLayout.vue';
 import SectionTitle from '@/Components/SectionTitle.vue';
 import Icon from '@/Components/Icon.vue';
+
+Chart.register(...registerables);
 
 const displayedText = ref('');
 const fullText = 'Pathfinder';
@@ -900,6 +1739,40 @@ const typingSpeed = 150;
 const erasingSpeed = 100;
 const pauseAfterTyping = 2000;
 const pauseAfterErasing = 500;
+
+// Process Model
+const selectedPhase = ref(null);
+
+const phaseDetails = {
+    'requirements': {
+        title: 'Requirements Planning',
+        description: 'The initial phase of the Rapid Application Development (RAD) methodology where project requirements are gathered, analyzed, and documented. This phase involves stakeholder meetings, user interviews, and requirement specification to establish the foundation for the development process.'
+    },
+    'user-design': {
+        title: 'User Design',
+        description: 'The core design phase where user interfaces and system interactions are designed. This phase focuses on creating user-friendly interfaces that meet the requirements established in the planning phase. The design is validated through iterative prototyping, testing, and refinement cycles.'
+    },
+    'prototype': {
+        title: 'Prototype',
+        description: 'A working model or mockup of the system is created to visualize and validate design concepts. Prototypes help stakeholders understand the system\'s functionality and provide early feedback for improvements.'
+    },
+    'test': {
+        title: 'Test',
+        description: 'The prototype is tested with users and stakeholders to identify usability issues, functional gaps, and areas for improvement. Testing ensures that the design meets user needs and system requirements.'
+    },
+    'refine': {
+        title: 'Refine',
+        description: 'Based on testing feedback, the design is refined and improved. This iterative process continues until the design meets all requirements and user expectations, ensuring a high-quality user experience.'
+    },
+    'construction': {
+        title: 'Construction',
+        description: 'The actual development phase where the system is built based on the finalized design. Developers implement the features, integrate components, and ensure code quality through best practices and testing.'
+    },
+    'cutover': {
+        title: 'Cutover',
+        description: 'The final phase where the system is deployed to production, data is migrated, users are trained, and the system goes live. This phase includes final testing, documentation, and transition from development to operational status.'
+    }
+};
 
 // Features data
 const features = ref([
@@ -1135,6 +2008,12 @@ const handleScreenshotError = (event) => {
     event.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%23f3f4f6" width="800" height="600"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="24" fill="%239ca3af"%3EScreenshot not found%3C/text%3E%3C/svg%3E';
 };
 
+const handleImageError = (event) => {
+    console.error('Image failed to load:', event.target.src);
+    // Optionally show a fallback or error message
+    event.target.style.display = 'none';
+};
+
 // Keyboard navigation
 let keyboardHandler = null;
 
@@ -1226,14 +2105,99 @@ const insights = ref([
     }
 ]);
 
-const metrics = ref([
-    { value: '4.55', label: 'Overall End-User Rating (Strongly Agree)' },
-    { value: '4.64', label: 'Ease of Use Score (Highest)' },
-    { value: '34', label: 'End-User Evaluators' },
-    { value: '13', label: 'IT Expert Evaluators' },
-    { value: '4.07', label: 'Overall Expert Rating (Agree)' },
-    { value: '4.15', label: 'Portability Score (Highest)' }
+// Chart refs
+const endUserPieChart = ref(null);
+const itExpertsBarChart = ref(null);
+
+// USE Ratings Data
+const useRatings = ref([
+    { characteristic: 'Usefulness', mean: '4.63', stars: 5, label: 'Strongly Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Ease of Use', mean: '4.64', stars: 5, label: 'Strongly Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Ease of Learning', mean: '4.51', stars: 5, label: 'Strongly Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Satisfaction', mean: '4.43', stars: 5, label: 'Strongly Agree', animatedValue: 0, animatedFill: 0 }
 ]);
+
+// ISO Ratings Data
+const isoRatings = ref([
+    { characteristic: 'Functional Suitability', mean: '4.03', stars: 4, label: 'Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Compatibility', mean: '4.08', stars: 4, label: 'Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Usability', mean: '4.08', stars: 4, label: 'Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Security', mean: '4.00', stars: 4, label: 'Agree', animatedValue: 0, animatedFill: 0 },
+    { characteristic: 'Portability', mean: '4.15', stars: 4, label: 'Agree', animatedValue: 0, animatedFill: 0 }
+]);
+
+// Overall Rating Data
+const overallRating = ref({
+    mean: '4.31', // Average of USE (4.55) and ISO (4.07) averages
+    stars: 4,
+    label: 'Agree',
+    animatedValue: 0,
+    animatedFill: 0
+});
+
+// Computed properties for averages
+const useAverage = computed(() => {
+    const sum = useRatings.value.reduce((acc, item) => acc + parseFloat(item.mean), 0);
+    return sum / useRatings.value.length;
+});
+
+const isoAverage = computed(() => {
+    const sum = isoRatings.value.reduce((acc, item) => acc + parseFloat(item.mean), 0);
+    return sum / isoRatings.value.length;
+});
+
+// End User Evaluators Distribution Data
+const endUserDistribution = {
+    labels: ['College Students (USLT)', 'Job Seekers'],
+    data: [21, 13], // Total: 34
+    backgroundColor: [
+        'rgba(102, 130, 163, 0.8)', // customButton #6682A3
+        'rgba(89, 112, 140, 0.8)'   // customblue #59708C
+    ],
+    borderColor: [
+        'rgba(102, 130, 163, 1)', // customButton #6682A3
+        'rgba(89, 112, 140, 1)'   // customblue #59708C
+    ]
+};
+
+// IT Experts Specialization Data
+const itExpertsSpecialization = {
+    labels: [
+        'Junior Programmer',
+        'IT Specialist',
+        'Project Development Officer I (e-Gov)',
+        'Senior Programmer',
+        'Database Admin',
+        'Programmer Trainee',
+        'Computer Maintenance Technologist II',
+        'Engineer I',
+        'Engineer III'
+    ],
+    data: [4, 2, 1, 1, 1, 1, 1, 1, 1], // Total: 13
+    backgroundColor: [
+        'rgba(102, 130, 163, 0.8)', // customButton #6682A3
+        'rgba(89, 112, 140, 0.8)',  // customblue #59708C
+        'rgba(65, 83, 103, 0.8)',   // customdarkblue #415367
+        'rgba(68, 87, 109, 0.8)',   // dark-slate #44576D
+        'rgba(107, 125, 143, 0.8)', // chart-4 #6B7D8F
+        'rgba(102, 130, 163, 0.6)', // customButton lighter
+        'rgba(89, 112, 140, 0.6)',  // customblue lighter
+        'rgba(65, 83, 103, 0.6)',   // customdarkblue lighter
+        'rgba(68, 87, 109, 0.6)'    // dark-slate lighter
+    ],
+    borderColor: [
+        'rgba(102, 130, 163, 1)', // customButton #6682A3
+        'rgba(89, 112, 140, 1)',  // customblue #59708C
+        'rgba(65, 83, 103, 1)',   // customdarkblue #415367
+        'rgba(68, 87, 109, 1)',   // dark-slate #44576D
+        'rgba(107, 125, 143, 1)', // chart-4 #6B7D8F
+        'rgba(102, 130, 163, 1)', // customButton
+        'rgba(89, 112, 140, 1)',  // customblue
+        'rgba(65, 83, 103, 1)',   // customdarkblue
+        'rgba(68, 87, 109, 1)'    // dark-slate
+    ],
+    borderWidth: 1
+};
 
 // Team data
 const students = ref([
@@ -1295,7 +2259,7 @@ const instructor = ref({
     image: '/images/team/lily-ann-dela-cruz.jpg'
 });
 
-onMounted(() => {
+onMounted(async () => {
     let currentIndex = 0;
     let isTyping = true;
     
@@ -1367,6 +2331,217 @@ onMounted(() => {
         el.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
         observer.observe(el);
     });
+
+    // Initialize charts after DOM is ready
+    await nextTick();
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Animate USE and ISO ratings
+    const animateRatings = () => {
+        // Animate USE ratings
+        useRatings.value.forEach((item, index) => {
+            const targetValue = parseFloat(item.mean);
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const increment = targetValue / steps;
+            const stepDuration = duration / steps;
+            let currentStep = 0;
+
+            const timer = setInterval(() => {
+                currentStep++;
+                const currentValue = Math.min(increment * currentStep, targetValue);
+                item.animatedValue = currentValue;
+                item.animatedFill = currentValue;
+
+                if (currentStep >= steps) {
+                    clearInterval(timer);
+                    item.animatedValue = targetValue;
+                    item.animatedFill = targetValue;
+                }
+            }, stepDuration);
+        });
+
+        // Animate ISO ratings with slight delay
+        setTimeout(() => {
+            isoRatings.value.forEach((item, index) => {
+                const targetValue = parseFloat(item.mean);
+                const duration = 2000; // 2 seconds
+                const steps = 60;
+                const increment = targetValue / steps;
+                const stepDuration = duration / steps;
+                let currentStep = 0;
+
+                const timer = setInterval(() => {
+                    currentStep++;
+                    const currentValue = Math.min(increment * currentStep, targetValue);
+                    item.animatedValue = currentValue;
+                    item.animatedFill = currentValue;
+
+                    if (currentStep >= steps) {
+                        clearInterval(timer);
+                        item.animatedValue = targetValue;
+                        item.animatedFill = targetValue;
+                    }
+                }, stepDuration);
+            });
+        }, 300);
+
+        // Animate Overall Rating
+        setTimeout(() => {
+            const targetValue = parseFloat(overallRating.value.mean);
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const increment = targetValue / steps;
+            const stepDuration = duration / steps;
+            let currentStep = 0;
+
+            const timer = setInterval(() => {
+                currentStep++;
+                const currentValue = Math.min(increment * currentStep, targetValue);
+                overallRating.value.animatedValue = currentValue;
+                overallRating.value.animatedFill = currentValue;
+
+                if (currentStep >= steps) {
+                    clearInterval(timer);
+                    overallRating.value.animatedValue = targetValue;
+                    overallRating.value.animatedFill = targetValue;
+                }
+            }, stepDuration);
+        }, 600);
+    };
+
+    // Start animations when evaluation results section is visible
+    const evaluationSection = document.querySelector('.relative.bg-gradient-to-br.from-gray-50.via-indigo-50\\/30.to-purple-50\\/30.rounded-3xl');
+    if (evaluationSection) {
+        const evaluationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateRatings();
+                    evaluationObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.1 });
+        evaluationObserver.observe(evaluationSection);
+        
+        // Fallback: start animation after a delay if section is already visible
+        setTimeout(() => {
+            const rect = evaluationSection.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isVisible) {
+                animateRatings();
+                evaluationObserver.disconnect();
+            }
+        }, 1000);
+    } else {
+        // Fallback: if section not found, start animation anyway
+        setTimeout(() => {
+            animateRatings();
+        }, 1000);
+    }
+
+    try {
+        // Create Pie Chart for End User Evaluators Distribution
+        if (endUserPieChart.value) {
+            new Chart(endUserPieChart.value, {
+                type: 'pie',
+                data: {
+                    labels: endUserDistribution.labels,
+                    datasets: [{
+                        data: endUserDistribution.data,
+                        backgroundColor: endUserDistribution.backgroundColor,
+                        borderColor: endUserDistribution.borderColor,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Create Bar Chart for IT Experts Specialization
+        if (itExpertsBarChart.value) {
+            new Chart(itExpertsBarChart.value, {
+                type: 'bar',
+                data: {
+                    labels: itExpertsSpecialization.labels,
+                    datasets: [{
+                        label: 'Number of Experts',
+                        data: itExpertsSpecialization.data,
+                        backgroundColor: itExpertsSpecialization.backgroundColor,
+                        borderColor: itExpertsSpecialization.borderColor,
+                        borderWidth: itExpertsSpecialization.borderWidth
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Horizontal bar chart
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1,
+                                font: {
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                font: {
+                                    size: 15
+                                }
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `Experts: ${context.parsed.y}`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    } catch (error) {
+        console.error('Error creating charts:', error);
+    }
 });
 </script>
 

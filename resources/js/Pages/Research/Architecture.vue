@@ -38,6 +38,294 @@
                     </div>
                 </section>
 
+                <!-- Process Model -->
+                <section class="mb-16">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Process Model</h3>
+                    <div class="bg-gray-100 rounded-lg p-8 border-2 border-gray-300">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden p-8 md:p-12">
+                            <!-- Process Model Diagram -->
+                            <div class="relative w-full overflow-x-auto py-8">
+                                <div class="min-w-[900px] mx-auto">
+                                    <!-- Process Flow Container -->
+                                    <div class="flex items-center justify-between relative">
+                                        <!-- Requirements Planning -->
+                                        <button
+                                            @click="selectedPhase = 'requirements'"
+                                            :class="[
+                                                'relative z-10 px-6 py-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                selectedPhase === 'requirements' 
+                                                    ? 'bg-customButton text-white shadow-xl scale-105' 
+                                                    : 'bg-customblue text-white hover:bg-customButton'
+                                            ]"
+                                            style="clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);"
+                                        >
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg leading-tight">Requirements</p>
+                                                <p class="font-bold text-lg leading-tight">Planning</p>
+                                            </div>
+                                        </button>
+
+                                        <!-- Arrow -->
+                                        <div class="flex-1 h-1 bg-customblue mx-2 relative">
+                                            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-customblue border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                                        </div>
+
+                                        <!-- User Design with Iterative Loop -->
+                                        <div class="relative w-64 h-64 flex items-center justify-center">
+                                            <!-- Circular Loop Background -->
+                                            <div class="absolute inset-0 rounded-full border-8 border-indigo-600"></div>
+                                            
+                                            <!-- Loop Arrow Indicators -->
+                                            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 256 256">
+                                                <!-- Top arrow (Prototype) -->
+                                                <path d="M 128 16 L 128 60" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="128,16 122,26 134,26" fill="#4f46e5" />
+                                                
+                                                <!-- Right arrow (Test) -->
+                                                <path d="M 240 128 L 196 128" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="240,128 230,122 230,134" fill="#4f46e5" />
+                                                
+                                                <!-- Bottom arrow (Refine) -->
+                                                <path d="M 128 240 L 128 196" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="128,240 134,230 122,230" fill="#4f46e5" />
+                                                
+                                                <!-- Left arrow -->
+                                                <path d="M 16 128 L 60 128" stroke="#4f46e5" stroke-width="4" fill="none" marker-end="url(#arrowhead)" />
+                                                <polygon points="16,128 26,134 26,122" fill="#4f46e5" />
+                                            </svg>
+                                            
+                                            <!-- Loop Labels - Positioned around the circle -->
+                                            <button
+                                                @click.stop="selectedPhase = 'prototype'"
+                                                :class="[
+                                                    'absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-110 cursor-pointer pointer-events-auto',
+                                                    selectedPhase === 'prototype'
+                                                        ? 'bg-indigo-700 text-white shadow-lg z-20'
+                                                        : 'bg-indigo-600 text-white hover:bg-indigo-700 z-20'
+                                                ]"
+                                            >
+                                                Prototype
+                                            </button>
+                                            
+                                            <button
+                                                @click.stop="selectedPhase = 'test'"
+                                                :class="[
+                                                    'absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-110 cursor-pointer pointer-events-auto',
+                                                    selectedPhase === 'test'
+                                                        ? 'bg-indigo-700 text-white shadow-lg z-20'
+                                                        : 'bg-indigo-600 text-white hover:bg-indigo-700 z-20'
+                                                ]"
+                                            >
+                                                Test
+                                            </button>
+                                            
+                                            <button
+                                                @click.stop="selectedPhase = 'refine'"
+                                                :class="[
+                                                    'absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-110 cursor-pointer pointer-events-auto',
+                                                    selectedPhase === 'refine'
+                                                        ? 'bg-indigo-700 text-white shadow-lg z-20'
+                                                        : 'bg-indigo-600 text-white hover:bg-indigo-700 z-20'
+                                                ]"
+                                            >
+                                                Refine
+                                            </button>
+
+                                            <!-- Central User Design Box -->
+                                            <button
+                                                @click="selectedPhase = 'user-design'"
+                                                :class="[
+                                                    'relative z-10 w-32 h-32 flex items-center justify-center rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                    selectedPhase === 'user-design'
+                                                        ? 'bg-customButton text-white shadow-xl scale-105'
+                                                        : 'bg-customblue text-white hover:bg-customButton'
+                                                ]"
+                                            >
+                                                <div class="text-center">
+                                                    <p class="font-bold text-lg leading-tight">User</p>
+                                                    <p class="font-bold text-lg leading-tight">Design</p>
+                                                </div>
+                                            </button>
+                                        </div>
+
+                                        <!-- Arrow -->
+                                        <div class="flex-1 h-1 bg-customButton mx-2 relative">
+                                            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-customButton border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                                        </div>
+
+                                        <!-- Construction -->
+                                        <button
+                                            @click="selectedPhase = 'construction'"
+                                            :class="[
+                                                'relative z-10 px-6 py-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                selectedPhase === 'construction'
+                                                    ? 'bg-customdarkblue text-white shadow-xl scale-105'
+                                                    : 'bg-customButton text-white hover:bg-customdarkblue'
+                                            ]"
+                                            style="clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%, 0 50%);"
+                                        >
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg">Construction</p>
+                                            </div>
+                                        </button>
+
+                                        <!-- Arrow -->
+                                        <div class="flex-1 h-1 bg-customdarkblue mx-2 relative">
+                                            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-customdarkblue border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                                        </div>
+
+                                        <!-- Cutover -->
+                                        <button
+                                            @click="selectedPhase = 'cutover'"
+                                            :class="[
+                                                'relative z-10 px-6 py-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer',
+                                                selectedPhase === 'cutover'
+                                                    ? 'bg-dark-slate text-white shadow-xl scale-105'
+                                                    : 'bg-customdarkblue text-white hover:bg-dark-slate'
+                                            ]"
+                                            style="clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%, 0 50%);"
+                                        >
+                                            <div class="text-center">
+                                                <p class="font-bold text-lg">Cutover</p>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase Details Panel -->
+                            <transition
+                                enter-active-class="transition-all duration-300 ease-out"
+                                enter-from-class="opacity-0 transform translate-y-4"
+                                enter-to-class="opacity-100 transform translate-y-0"
+                                leave-active-class="transition-all duration-200 ease-in"
+                                leave-from-class="opacity-100"
+                                leave-to-class="opacity-0"
+                            >
+                                <div v-if="selectedPhase" class="mt-8 p-6 bg-indigo-50 rounded-lg border-2 border-indigo-200">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="text-2xl font-bold text-gray-900">{{ phaseDetails[selectedPhase].title }}</h4>
+                                        <button
+                                            @click="selectedPhase = null"
+                                            class="text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
+                                        >
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- Show image for Requirements Planning -->
+                                    <div v-if="selectedPhase === 'requirements'" class="w-full">
+                                        <img 
+                                            src="/images/partnership/requirements-planning.jpg" 
+                                            alt="Requirements Planning"
+                                            class="w-full h-auto rounded-lg shadow-lg"
+                                            @error="handleImageError"
+                                        />
+                                    </div>
+                                    <!-- Show images for User Design -->
+                                    <div v-else-if="selectedPhase === 'user-design'" class="w-full">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                                            <div class="w-full flex items-center justify-center">
+                                                <img 
+                                                    src="/images/user-design/figma-logo.png" 
+                                                    alt="Figma Logo"
+                                                    class="w-full h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center">
+                                                <img 
+                                                    src="/images/user-design/lucid-logo.png" 
+                                                    alt="Lucidchart Logo"
+                                                    class="w-full h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Show images for Construction -->
+                                    <div v-else-if="selectedPhase === 'construction'" class="w-full">
+                                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/vue-logo.png" 
+                                                    alt="Vue.js Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/tailwind-logo.png" 
+                                                    alt="Tailwind CSS Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/laravel-logo.png" 
+                                                    alt="Laravel Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/postgresql-logo.png" 
+                                                    alt="PostgreSQL Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex items-center justify-center bg-white p-4 rounded-lg shadow-lg">
+                                                <img 
+                                                    src="/images/construction-logo/supabase-logo.png" 
+                                                    alt="Supabase Logo"
+                                                    class="w-full h-auto rounded-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Show images for Cutover -->
+                                    <div v-else-if="selectedPhase === 'cutover'" class="w-full">
+                                        <div class="flex flex-col gap-6 items-center justify-center">
+                                            <div class="w-full flex justify-center">
+                                                <img 
+                                                    src="/images/partnership/IMG_1166.jpg" 
+                                                    alt="Partnership Image 1"
+                                                    class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex justify-center">
+                                                <img 
+                                                    src="/images/partnership/IMG_1441.jpg" 
+                                                    alt="Partnership Image 2"
+                                                    class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                            <div class="w-full flex justify-center">
+                                                <img 
+                                                    src="/images/partnership/requirements-planning.jpg" 
+                                                    alt="Partnership Image 3"
+                                                    class="w-full max-w-4xl h-auto rounded-lg shadow-lg object-contain"
+                                                    @error="handleImageError"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Show text description for other phases -->
+                                    <p v-else class="text-gray-700 leading-relaxed">{{ phaseDetails[selectedPhase].description }}</p>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- System Architecture Diagram -->
                 <section class="mb-16">
                     <h3 class="text-3xl font-bold text-gray-900 mb-6">System Architecture Diagram</h3>
@@ -148,6 +436,38 @@ import MainLayout from '@/Layouts/MainLayout.vue';
 import SectionTitle from '@/Components/SectionTitle.vue';
 
 const erdPlaceholder = ref(null);
+const selectedPhase = ref(null);
+
+const phaseDetails = {
+    'requirements': {
+        title: 'Requirements Planning',
+        description: 'The initial phase of the Rapid Application Development (RAD) methodology where project requirements are gathered, analyzed, and documented. This phase involves stakeholder meetings, user interviews, and requirement specification to establish the foundation for the development process.'
+    },
+    'user-design': {
+        title: 'User Design',
+        description: 'The core design phase where user interfaces and system interactions are designed. This phase focuses on creating user-friendly interfaces that meet the requirements established in the planning phase. The design is validated through iterative prototyping, testing, and refinement cycles.'
+    },
+    'prototype': {
+        title: 'Prototype',
+        description: 'A working model or mockup of the system is created to visualize and validate design concepts. Prototypes help stakeholders understand the system\'s functionality and provide early feedback for improvements.'
+    },
+    'test': {
+        title: 'Test',
+        description: 'The prototype is tested with users and stakeholders to identify usability issues, functional gaps, and areas for improvement. Testing ensures that the design meets user needs and system requirements.'
+    },
+    'refine': {
+        title: 'Refine',
+        description: 'Based on testing feedback, the design is refined and improved. This iterative process continues until the design meets all requirements and user expectations, ensuring a high-quality user experience.'
+    },
+    'construction': {
+        title: 'Construction',
+        description: 'The actual development phase where the system is built based on the finalized design. Developers implement the features, integrate components, and ensure code quality through best practices and testing.'
+    },
+    'cutover': {
+        title: 'Cutover',
+        description: 'The final phase where the system is deployed to production, data is migrated, users are trained, and the system goes live. This phase includes final testing, documentation, and transition from development to operational status.'
+    }
+};
 
 const handleImageError = (event) => {
     console.error('ERD image failed to load:', event.target.src);
