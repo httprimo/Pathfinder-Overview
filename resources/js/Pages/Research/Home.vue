@@ -1694,16 +1694,14 @@
                     <div v-for="(item, index) in conclusionObjectives" :key="index"
                         class="relative overflow-hidden rounded-2xl border border-green-100 bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm card-hover">
                         <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-400 via-green-400 to-lime-300"></div>
-                        <div
-                            class="absolute right-4 top-4 inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold text-green-700 bg-green-50 border border-green-100">
-                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Done
-                        </div>
-
                         <div class="p-6 space-y-4">
                             <div class="flex items-start gap-4">
-                                <div
-                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-green-50 border border-green-200 flex items-center justify-center text-green-700 shadow-inner">
-                                    <Icon name="check" :size="22" class="text-green-600" />
+                                <div class="flex-shrink-0 flex flex-col items-center gap-1">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-green-50 border border-green-200 flex items-center justify-center text-green-700 shadow-inner">
+                                        <Icon name="check" :size="22" class="text-green-600" />
+                                    </div>
+                                    <span class="text-xs font-semibold text-green-700">Done</span>
                                 </div>
                                 <div class="flex-1 space-y-2">
                                     <h4 class="text-xl font-semibold text-gray-900 leading-snug">
