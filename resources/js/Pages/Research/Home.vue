@@ -1381,8 +1381,8 @@
             </div>
         </section>
 
-        <!-- Results Section -->
-        <section id="results" class="py-16 bg-white scroll-mt-16">
+        <!-- Research Results Section -->
+        <section id="research-results" class="py-16 bg-white scroll-mt-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <SectionTitle title="Research Results" subtitle="Findings, insights, and outcomes of our research" />
 
@@ -1477,17 +1477,10 @@
 
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Research Results Section -->
-        <section id="research-results" class="py-16 bg-gray-50 scroll-mt-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <SectionTitle title="Research Results" subtitle="Findings, insights, and outcomes of our research" />
 
                 <!-- Evaluation Results with Cards -->
                 <div
-                    class="relative bg-gradient-to-br from-gray-50 via-indigo-50/30 to-purple-50/30 rounded-3xl p-8 md:p-12 border border-gray-200/50 shadow-xl overflow-hidden mt-8">
+                    class="relative bg-gradient-to-br from-gray-50 via-indigo-50/30 to-purple-50/30 rounded-3xl p-8 md:p-12 border border-gray-200/50 shadow-xl overflow-hidden mt-12">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-200/20 rounded-full blur-3xl -mr-32 -mt-32">
                     </div>
                     <div class="relative z-10">
@@ -1613,7 +1606,7 @@
                                                 </template>
                                                 <template
                                                     v-else-if="star === Math.floor(isoItem.animatedFill) + 1 && (isoItem.animatedFill % 1) > 0">
-                                                    <!-- Partial star with animated fill percentage -->
+                                                    <!-- Partial star -->
                                                     <div class="relative w-10 h-10">
                                                         <svg class="w-10 h-10 text-gray-300 absolute"
                                                             fill="currentColor" viewBox="0 0 20 20">
@@ -1629,7 +1622,6 @@
                                                     </div>
                                                 </template>
                                                 <template v-else>
-                                                    <!-- Empty star -->
                                                     <svg class="w-10 h-10 text-gray-300" fill="currentColor"
                                                         viewBox="0 0 20 20">
                                                         <path
@@ -1685,6 +1677,332 @@
                                         </div>
                                         <p class="text-2xl font-bold text-indigo-600">{{ isoAverage.toFixed(2) }}</p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="py-16 bg-gradient-to-b from-white via-green-50/40 to-white scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <SectionTitle title="Conclusion" subtitle="Objectives completed through our research system" />
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div v-for="(item, index) in conclusionObjectives" :key="index"
+                        class="relative overflow-hidden rounded-2xl border border-green-100 bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm card-hover">
+                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-400 via-green-400 to-lime-300"></div>
+                        <div
+                            class="absolute right-4 top-4 inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold text-green-700 bg-green-50 border border-green-100">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Done
+                        </div>
+
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-green-50 border border-green-200 flex items-center justify-center text-green-700 shadow-inner">
+                                    <Icon name="check" :size="22" class="text-green-600" />
+                                </div>
+                                <div class="flex-1 space-y-2">
+                                    <h4 class="text-xl font-semibold text-gray-900 leading-snug">
+                                        {{ item.title }}
+                                    </h4>
+                                    <p class="text-gray-600">{{ item.description }}</p>
+                                </div>
+                            </div>
+
+                            <div v-if="item.points && item.points.length" class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div v-for="(point, pointIndex) in item.points" :key="pointIndex"
+                                    class="flex items-center gap-2 px-3 py-2 rounded-xl bg-green-50 text-green-800 text-sm border border-green-100">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="leading-tight">{{ point }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recommendations / Future Work Section -->
+        <section id="recommendations" class="py-16 bg-white scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <SectionTitle title="Recommendations" subtitle="For future to strengthen Pathfinder" />
+
+                <div
+                    class="mt-6 rounded-3xl overflow-hidden border border-emerald-100 bg-gradient-to-r from-emerald-50 via-white to-indigo-50 shadow-inner">
+                    <div class="p-6 md:p-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                        <div class="space-y-3 max-w-2xl">
+                            <p class="text-xs font-semibold uppercase text-emerald-700 tracking-wide">What we recommend
+                                next</p>
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">Focus on impact-ready
+                                upgrades and intelligence to keep Pathfinder ahead.</h3>
+                            <p class="text-gray-700">These priorities translate directly into better learner outcomes,
+                                credibility for issuers, and lower admin overhead.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold rounded-full bg-white border border-emerald-100 text-emerald-700 shadow-sm">Growth</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold rounded-full bg-white border border-emerald-100 text-emerald-700 shadow-sm">Trust
+                                    & credentials</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold rounded-full bg-white border border-indigo-100 text-indigo-700 shadow-sm">Automation</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 w-full md:w-auto">
+                            <div class="rounded-2xl bg-white/90 border border-emerald-100 shadow-sm p-4">
+                                <p class="text-xs font-semibold text-emerald-700">Confidence</p>
+                                <p class="text-2xl font-bold text-gray-900 mt-1">High</p>
+                                <p class="text-xs text-gray-600">Based on stakeholder interviews and pilot feedback.</p>
+                            </div>
+                            <div class="rounded-2xl bg-white/90 border border-indigo-100 shadow-sm p-4">
+                                <p class="text-xs font-semibold text-indigo-700">Timeline</p>
+                                <p class="text-2xl font-bold text-gray-900 mt-1">Next 1-2 releases</p>
+                                <p class="text-xs text-gray-600">Prioritize quick wins, then scale AI features.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article
+                            class="h-full relative overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-lg">
+                            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-400 via-green-400 to-lime-300">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center shadow-inner">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 8v4l3 3" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-semibold text-emerald-700">Platform expansion</p>
+                                        <h3 class="text-xl font-semibold text-gray-900">Broaden reach & offerings</h3>
+                                        <p class="text-gray-600">Keep improving Pathfinder by widening its capabilities and
+                                            the impact radius.</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div
+                                        class="flex gap-3 items-start p-4 rounded-2xl bg-emerald-50 border border-emerald-100 shadow-sm">
+                                        <div
+                                            class="w-9 h-9 rounded-xl bg-white flex items-center justify-center border border-emerald-100 text-emerald-600">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M7 5h10a2 2 0 012 2v6a2 2 0 01-2 2h-2l-3 3-3-3H7a2 2 0 01-2-2V7a2 2 0 012-2z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M9 9h6m-6 3h4" />
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="text-xs font-semibold uppercase text-emerald-700">Primary
+                                                recommendation</p>
+                                            <p class="font-medium text-gray-900">Add a post-test module for certificate
+                                                issuance</p>
+                                            <p class="text-gray-600 text-sm">Make certificates competency-based, not just
+                                                attendance (QR), to ensure knowledge is earned.</p>
+                                            <div class="flex flex-wrap gap-2 pt-1">
+                                                <span
+                                                    class="px-2.5 py-1 rounded-full bg-white border border-emerald-100 text-xs font-semibold text-emerald-700">Credentialing</span>
+                                                <span
+                                                    class="px-2.5 py-1 rounded-full bg-white border border-emerald-100 text-xs font-semibold text-emerald-700">Compliance</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-3">
+                                        <div
+                                            class="flex gap-3 items-start p-3 rounded-2xl bg-white border border-emerald-100/80 shadow-sm">
+                                            <span
+                                                class="mt-1 inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold">1</span>
+                                            <div class="space-y-1">
+                                                <p class="font-medium text-gray-900">Integrate secure payments</p>
+                                                <p class="text-gray-600 text-sm">Offer paid, specialized programs alongside
+                                                    free resources to sustain the platform.</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex gap-3 items-start p-3 rounded-2xl bg-white border border-emerald-100/80 shadow-sm">
+                                            <span
+                                                class="mt-1 inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold">2</span>
+                                            <div class="space-y-1">
+                                                <p class="font-medium text-gray-900">Expand administration</p>
+                                                <p class="text-gray-600 text-sm">Scale from Tuguegarao City to all DICT Region
+                                                    II to maximize regional workforce impact.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="pt-3 border-t border-emerald-100 flex flex-wrap gap-2 text-xs font-semibold text-emerald-700">
+                                    <span class="px-2 py-1 rounded-full bg-emerald-50 border border-emerald-100">Outcome:
+                                        trusted credentials</span>
+                                    <span class="px-2 py-1 rounded-full bg-emerald-50 border border-emerald-100">Revenue-ready
+                                        programs</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article
+                            class="h-full relative overflow-hidden rounded-2xl border border-indigo-100 bg-white shadow-lg">
+                            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-300">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="w-11 h-11 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center shadow-inner">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M9.5 6.5l1 2 2 .3-1.5 1.6.4 2.1-1.9-1-1.9 1 .4-2.1L6.5 8.8l2-.3z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M15.5 4l.7 1.4 1.6.2-1.2 1.3.3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1.3 1.6-.2z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M16.5 13l.5 1 .9.1-.7.8.2 1-1-.6-1 .6.2-1-.7-.8 1-.1z" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-semibold text-indigo-700">Technical evolution</p>
+                                        <h3 class="text-xl font-semibold text-gray-900">Smarter matching engine</h3>
+                                        <p class="text-gray-600">Use this study as a base to add intelligence and
+                                            automation.</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div
+                                        class="flex gap-3 items-start p-4 rounded-2xl bg-indigo-50 border border-indigo-100 shadow-sm">
+                                        <div
+                                            class="w-9 h-9 rounded-xl bg-white flex items-center justify-center border border-indigo-100 text-indigo-600">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M7 7a5 5 0 0110 0v2a5 5 0 01-10 0V7z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M6 14h12l-2 4H8l-2-4z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M10 10h4" />
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="text-xs font-semibold uppercase text-indigo-700">Primary
+                                                recommendation</p>
+                                            <p class="font-medium text-gray-900">Embed AI/NLP for auto-categorization</p>
+                                            <p class="text-gray-600 text-sm">Analyze career and training descriptions to
+                                                auto-assign relevant tags and reduce manual effort.</p>
+                                            <div class="flex flex-wrap gap-2 pt-1">
+                                                <span
+                                                    class="px-2.5 py-1 rounded-full bg-white border border-indigo-100 text-xs font-semibold text-indigo-700">AI/NLP</span>
+                                                <span
+                                                    class="px-2.5 py-1 rounded-full bg-white border border-indigo-100 text-xs font-semibold text-indigo-700">Matching
+                                                    accuracy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-3">
+                                        <div
+                                            class="flex gap-3 items-start p-3 rounded-2xl bg-white border border-indigo-100/80 shadow-sm">
+                                            <span
+                                                class="mt-1 inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold">1</span>
+                                            <div class="space-y-1">
+                                                <p class="font-medium text-gray-900">Automate tagging</p>
+                                                <p class="text-gray-600 text-sm">Let the NLP model assign tags automatically
+                                                    to optimize accuracy and minimize human error.</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex gap-3 items-start p-3 rounded-2xl bg-white border border-indigo-100/80 shadow-sm">
+                                            <span
+                                                class="mt-1 inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold">2</span>
+                                            <div class="space-y-1">
+                                                <p class="font-medium text-gray-900">Feedback loop</p>
+                                                <p class="text-gray-600 text-sm">Use admin overrides as training signals to
+                                                    continuously improve recommendations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="pt-3 border-t border-indigo-100 flex flex-wrap gap-2 text-xs font-semibold text-indigo-700">
+                                    <span class="px-2 py-1 rounded-full bg-indigo-50 border border-indigo-100">Outcome:
+                                        faster matching</span>
+                                    <span class="px-2 py-1 rounded-full bg-indigo-50 border border-indigo-100">Lower admin
+                                        load</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="rounded-2xl border border-gray-100 bg-white shadow-lg p-6">
+                            <p class="text-sm font-semibold text-gray-900">Immediate next steps</p>
+                            <ul class="mt-3 space-y-3 text-sm text-gray-700">
+                                <li class="flex gap-3 items-start">
+                                    <span
+                                        class="mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-50 text-emerald-700 text-sm font-semibold border border-emerald-100">1</span>
+                                    <div>
+                                        <p class="font-medium text-gray-900">Define certification rubric</p>
+                                        <p class="text-gray-600 text-xs">Outline passing criteria and align QR design with
+                                            issuers.</p>
+                                    </div>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <span
+                                        class="mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold border border-indigo-100">2</span>
+                                    <div>
+                                        <p class="font-medium text-gray-900">Prototype AI tagging</p>
+                                        <p class="text-gray-600 text-xs">Start with a rules + keywords baseline, then plug
+                                            in an NLP model.</p>
+                                    </div>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <span
+                                        class="mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-50 text-amber-700 text-sm font-semibold border border-amber-100">3</span>
+                                    <div>
+                                        <p class="font-medium text-gray-900">Plan payment rollout</p>
+                                        <p class="text-gray-600 text-xs">Select provider, map flows (refunds, receipts), and
+                                            bake into admin dashboard.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white shadow-md p-6">
+                            <p class="text-sm font-semibold text-gray-900">What success looks like</p>
+                            <div class="mt-3 space-y-3 text-sm text-gray-700">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </span>
+                                    <p>Certificates reflect skill, not just attendance.</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M9 12l2 2 4-4" />
+                                        </svg>
+                                    </span>
+                                    <p>Training-to-role matching gets faster and more accurate.</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 8v4m0 4h.01" />
+                                        </svg>
+                                    </span>
+                                    <p>Revenue streams fund the roadmap without raising overhead.</p>
                                 </div>
                             </div>
                         </div>
@@ -2172,6 +2490,35 @@ const technologies = ref([
     { icon: 'rocket', name: 'Render', description: 'Cloud platform for deployment and hosting' },
     { icon: 'design', name: 'Figma', description: 'Design tool for UI/UX prototyping' },
     { icon: 'chart', name: 'Lucidchart', description: 'Database schema design and visualization' }
+]);
+
+// Completed objectives used in the conclusion checklist
+const conclusionObjectives = ref([
+    {
+        title: 'Career & training matching web app delivered',
+        description: 'Built Pathfinder using the RAD model to automatically match target careers with training posts that share similar tags.'
+    },
+    {
+        title: 'System quality validated (ISO/IEC 25010)',
+        description: 'Evaluated with IT experts; all characteristics met the Agree benchmark, confirming the system meets required standards.',
+        points: [
+            'Functional Suitability',
+            'Compatibility',
+            'Usability',
+            'Security',
+            'Portability'
+        ]
+    },
+    {
+        title: 'User perception confirmed (USE Questionnaire)',
+        description: 'End users strongly agree that the system is useful, satisfying, easy to use, and easy to learn.',
+        points: [
+            'Usefulness',
+            'Satisfaction',
+            'Ease of Use',
+            'Ease of Learning'
+        ]
+    }
 ]);
 
 // Results data

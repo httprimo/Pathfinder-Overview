@@ -15,24 +15,24 @@
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-sm">
                         <li>
-                            <Link :href="route('home')" class="text-gray-400 hover:text-white transition-colors">
+                            <a href="/#home" class="text-gray-400 hover:text-white transition-colors">
                                 Home
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link :href="route('about')" class="text-gray-400 hover:text-white transition-colors">
+                            <a href="/#about" class="text-gray-400 hover:text-white transition-colors">
                                 About
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link :href="route('features')" class="text-gray-400 hover:text-white transition-colors">
+                            <a href="/#features" class="text-gray-400 hover:text-white transition-colors">
                                 Features
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link :href="route('team')" class="text-gray-400 hover:text-white transition-colors">
+                            <a href="/#team" class="text-gray-400 hover:text-white transition-colors">
                                 Team
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -52,8 +52,4 @@
         </div>
     </footer>
 </template>
-
-<script setup>
-import { Link } from '@inertiajs/vue3';
-</script>
 
