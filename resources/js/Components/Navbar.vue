@@ -67,11 +67,7 @@ const activeSection = ref('#home');
 const menuItems = [
     { name: 'Home', anchor: '#home' },
     { name: 'About', anchor: '#about' },
-    { name: 'Objectives', anchor: '#objectives' },
     { name: 'Features', anchor: '#features' },
-    { name: 'Methodology', anchor: '#methodology' },
-    { name: 'Architecture', anchor: '#architecture' },
-    { name: 'Results', anchor: '#results' },
     { name: 'Team', anchor: '#team' },
 ];
 
